@@ -16,7 +16,7 @@ class Downloader:
 
     def webdriver_create(self):
         chromeOptions = webdriver.ChromeOptions()
-        prefs = {"plugins.always_open_pdf_externally": True, "download.default_directory" : '{}_files'.format(self.subject)} # Here should be a list
+        prefs = {"plugins.always_open_pdf_externally": True, "download.default_directory" : '{}_files'.format(self.subject)}
         chromeOptions.add_experimental_option("prefs",prefs)
         chromeOptions.add_argument("--headless")
         driver = webdriver.Chrome(executable_path="/Users/diego/downloads/chromedriver", chrome_options=chromeOptions)
